@@ -15,9 +15,13 @@ int main()
 	{
 		while(n>0){
 			d=n%10;
+			if(d!=2&&d!=3&&d!=5&&d!=7){
+			    flag=0;
+			    break;
+			}
 			n/=10;
 	}
-		if(d==2||d==3||d==5||d==7) printf("Mega Prime");
+		if(flag==1) printf("Mega Prime");
 		else printf("Not Mega Prime ");
 	}
 	else
